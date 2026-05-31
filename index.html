@@ -71,32 +71,23 @@ nav .container{
     color:var(--text);
 }
 
-.hero{
-    min-height:100vh;
-    display:flex;
-    align-items:center;
+.hero-content {
+    text-align: center;
 }
 
-.hero-content{
-    max-width:800px;
+.hero-photo {
+    margin-bottom: 2rem;
 }
 
-.hero h1{
-    font-size:4rem;
-    line-height:1.1;
-    margin-bottom:1rem;
-}
-
-.hero h2{
-    font-weight:400;
-    color:var(--light);
-    margin-bottom:2rem;
-}
-
-.hero p{
-    font-size:1.2rem;
-    color:var(--light);
-    margin-bottom:2rem;
+.hero-photo img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+    border: 4px solid white;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
 
 .buttons{
@@ -300,6 +291,10 @@ footer{
 <div class="container">
 <div class="hero-content">
 
+<div class="hero-photo">
+    <img src="img/tom.jpg" alt="Tomás Vega Waichman">
+</div>
+
 <h1>Tomás Vega Waichman</h1>
 
 <h2>
@@ -311,16 +306,15 @@ Using computational genomics to understand cancer and development.
 </p>
 
 <div class="buttons">
-<a class="btn btn-primary" href="#">CV</a>
-<a class="btn" href="#">GitHub</a>
-<a class="btn" href="#">DockerHub</a>
-<a class="btn" href="#">Google Scholar</a>
+    <a class="btn btn-primary" href="#">CV</a>
+    <a class="btn" href="https://github.com/tvegawaichman">GitHub</a>
+    <a class="btn" href="https://hub.docker.com/u/tvegawaichman">DockerHub</a>
+    <a class="btn" href="#">Google Scholar</a>
 </div>
 
 </div>
 </div>
 </section>
-
 <section id="about">
 <div class="container">
 
@@ -482,6 +476,7 @@ A multimodal single-cell atlas of the adolescent brain reveals gene regulatory n
   Paper
 </a>
 </div>
+</div>
 
 <div class="publication">
 <div class="publication-title">
@@ -504,13 +499,14 @@ Transcriptional dynamics orchestrating the development and integration of neuron
   Paper
 </a>
 </div>
+</div>
 
 <div class="publication">
 <div class="publication-title">
 scX: a user-friendly tool for scRNAseq exploration 
 </div>
 <div class="publication-authors">
-      <strong>Tomás V. Waichman</strong>, M. L. Vercesi, Ariel A. Berardino,
+      <strong>Tomás Vega Waichman</strong>, M. L. Vercesi, Ariel A. Berardino,
         Maximiliano S. Beckel, Damiana Giacomini,
         Natalí B. Rasetto, Magalí Herrero,
         Daniela J. Di Bella, Paola Arlotta,
@@ -527,7 +523,6 @@ scX: a user-friendly tool for scRNAseq exploration
 </a>
 </div>
 
-</div>
 </div>
 
 </div>
