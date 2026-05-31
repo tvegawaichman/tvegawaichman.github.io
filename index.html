@@ -166,26 +166,58 @@ section{
     color:var(--light);
 }
 
-.project{
-    border:1px solid #eee;
-    border-radius:16px;
-    padding:2rem;
-    margin-bottom:1.5rem;
+.project {
+    border: 1px solid #eee;
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
 }
 
-.project h3{
-    margin-bottom:.5rem;
+.project-content {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
 }
 
-.project p{
-    color:var(--light);
-    margin-bottom:1rem;
+.project-img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 1px solid #eee;
 }
 
-.project-links{
-    display:flex;
-    gap:1rem;
+.project-text {
+    flex: 1;
 }
+
+.project h3 {
+    margin-bottom: .5rem;
+}
+
+.project p {
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.project-links {
+    display: flex;
+    gap: .75rem;
+}
+
+/* mobile responsive */
+@media (max-width: 768px) {
+    .project-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .project-img {
+        width: 100%;
+        height: auto;
+    }
+}
+
 
 .publication{
     padding:1.5rem 0;
@@ -351,16 +383,51 @@ and lineage transitions.
 
 <div class="project">
 
-<h3>CoRAL</h3>
+    <div class="project-content">
 
-<p>
-Robust cell identity mapping across healthy and diseased tissues.
-</p>
+        <img class="project-img" src="img/coral.png" alt="CoRAL figure">
 
-<div class="project-links">
-<a class="btn" href="#">Code</a>
-<a class="btn" href="#">Paper</a>
+        <div class="project-text">
+
+            <h3>CoRAL</h3>
+
+            <p>
+                Quantification of lineage programs at single cell resolution
+            </p>
+
+            <div class="project-links">
+                <a class="btn" href="https://github.com/fungenomics/CoRAL">Code</a>
+                <a class="btn" href="#">Paper</a>
+            </div>
+
+        </div>
+
+    </div>
+
 </div>
+
+<div class="project">
+
+    <div class="project-content">
+
+        <img class="project-img" src="img/scX.png" alt="scX figure">
+
+        <div class="project-text">
+
+            <h3>scX</h3>
+
+            <p>
+                scX: A user-friendly tool for scRNAseq exploration 
+            </p>
+
+            <div class="project-links">
+                <a class="btn" href="https://github.com/chernolabs/scX">Code</a>
+                <a class="btn" href="https://doi.org/10.1093/bioadv/vbae062">Paper</a>
+            </div>
+
+        </div>
+
+    </div>
 
 </div>
 
@@ -390,31 +457,56 @@ X
 <section id="publications">
 <div class="container">
 
-<h2 class="section-title">Selected Publications</h2>
+<h2 class="section-title">Publications</h2>
 
 <div class="publication">
 <div class="publication-title">
-TBD
+A multimodal single-cell atlas of the adolescent brain reveals gene regulatory networks linking development to disease risk
 </div>
-
 <div class="publication-authors">
-TBD
+  Isabella C. Galvão,, Manuela Lemoine, <strong>Tomás Vega Waichman</strong>,
+  Bhavyaa Chandarana, Steven Hébert, Thais C. de Oliveira, 
+  Luciano H. B. dos Santos, Fabio Rogerio, Clarissa L. Yasuda,
+  Enrico Ghizoni, Fernando Cendes, Iscia LopesCendes, Claudia L. Kleinman,
+  Diogo F. T. Veiga
+        
 </div>
+<div class="publication-journal">
+        <em>bioRxiv</em>,
+        2026
+</div>
+
+<div class="publication-links">
+<a class="btn" href="https://doi.org/10.64898/2026.02.20.707029" target="_blank">
+  Paper
+</a>
 </div>
 
 <div class="publication">
 <div class="publication-title">
-Publication Title
+Transcriptional dynamics orchestrating the development and integration of neurons born in the adult hippocampus
 </div>
-
 <div class="publication-authors">
-Authors
+        Natalí B. Rasetto, Damiana Giacomini, Ariel A. Berardino,
+        <strong>Tomás Vega Waichman</strong>, Maximiliano S. Beckel,
+        Daniela J. Di Bella, Juliana Brown, M. Georgina Davies-Sala,
+        Chiara Gerhardinger, Dieter Chichung Lie, Paola Arlotta,
+        Ariel Chernomoretz, Alejandro F. Schinder 
 </div>
+<div class="publication-journal">
+        <em>Science Advances</em>,
+        Volume 10, Issue 29, 2024
+</div>
+
+<div class="publication-links">
+<a class="btn" href="https://doi.org/10.1126/sciadv.adp6039" target="_blank">
+  Paper
+</a>
 </div>
 
 <div class="publication">
 <div class="publication-title">
-Publication Title
+scX: a user-friendly tool for scRNAseq exploration 
 </div>
 <div class="publication-authors">
       <strong>Tomás V. Waichman</strong>, M. L. Vercesi, Ariel A. Berardino,
@@ -446,11 +538,11 @@ Publication Title
 <h2 class="section-title">Contact</h2>
 
 <p>
-Email: your.email@institution.edu
+Email: tomas.vegawaichman@mail.mcgill.ca
 </p>
 
 <p>
-GitHub: github.com/yourusername
+GitHub: github.com/tvegawaichman
 </p>
 
 <p>
