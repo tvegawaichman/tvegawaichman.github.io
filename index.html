@@ -97,6 +97,43 @@ nav .container{
     flex-wrap: wrap;
 }
 
+.theme {
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 60px 20px 30px;
+}
+
+.avatar {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 4px solid white;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 6px;
+}
+
+.hero h2 {
+  color: var(--accent);
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: var(--muted);
+  margin-bottom: 25px;
+}
+
 .buttons{
     display:flex;
     gap:1rem;
@@ -300,7 +337,7 @@ footer{
 <div class="hero-content">
 
 <div class="hero-photo">
-    <img src="img/tom.jpg" alt="Tomás Vega Waichman">
+    <img class="avatar" src="img/tom.jpg" alt="Tomás Vega Waichman">
 </div>
 
 <h1>Tomás Vega Waichman</h1>
@@ -309,8 +346,9 @@ footer{
 Computational Biologist
 </h2>
 
-<p>
-Using computational genomics to understand cancer and development.
+
+<p class="subtitle">
+      Using computational genomics to understand cancer and development.
 </p>
 
 <div class="buttons">
@@ -320,9 +358,57 @@ Using computational genomics to understand cancer and development.
     <a class="btn" href="#">Google Scholar</a>
 </div>
 
+ <!-- CONTENT -->
+  <main class="container">
+
+    <!-- FEATURED PROJECTS -->
+    <section class="card">
+      <h3>Featured Projects</h3>
+
+      <div class="project">
+        <div class="project-plot"></div>
+
+        <div class="project-info">
+          <h4>CoRAL</h4>
+          <p>Cell identity mapping across conditions</p>
+          <div class="links">
+            <a href="#">Code</a>
+            <a href="#">Paper</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PUBLICATIONS -->
+    <section class="card">
+      <h3>Recent Publications</h3>
+
+      <ul class="pubs">
+        <li>
+          <b>CoRAL: Cell identity mapping across conditions</b>
+          <span>Bioinformatics Advances, 2024</span>
+        </li>
+
+        <li>
+          <b>scIntegration: Minimalist toolkit for single-cell integration</b>
+          <span>Briefings in Bioinformatics, 2022</span>
+        </li>
+
+        <li>
+          <b>scX: Accurate and scalable cell type deconvolution</b>
+          <span>Bioinformatics, 2024</span>
+        </li>
+      </ul>
+
+      <a class="view-all" href="#">View all publications →</a>
+    </section>
+
+  </main>
+
 </div>
 </div>
 </section>
+
 <section id="about">
 <div class="container">
 
