@@ -195,6 +195,61 @@ section{
     gap:2rem;
 }
 
+/* ===== FEATURED PROJECT ===== */
+.project {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.project-plot img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+/* ===== PUBLICATIONS TIMELINE ===== */
+.pubs {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+.pubs li {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+  position: relative;
+}
+
+/* vertical line */
+.pubs {
+  padding-left: 1.5rem;
+  border-left: 2px solid #e5e7eb;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background: #4b5563;
+  border-radius: 50%;
+  margin-top: 6px;
+  flex-shrink: 0;
+}
+
+.pub-content b {
+  display: block;
+  font-size: 0.95rem;
+}
+
+.pub-content span {
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
 .card{
     border:1px solid #eee;
     border-radius:16px;
@@ -405,7 +460,7 @@ Computational Biologist
 
       <div class="project">
         <div class="project-plot"></div>
-
+          <img src="img/coral.png" alt="CoRAL overview">
         <div class="project-info">
           <h4>CoRAL</h4>
           <p>Cell identity mapping across conditions</p>
@@ -422,22 +477,30 @@ Computational Biologist
       <h3>Recent Publications</h3>
 
       <ul class="pubs">
-        <li>
-          <b>CoRAL: Cell identity mapping across conditions</b>
-          <span>Bioinformatics Advances, 2024</span>
-        </li>
+  <li>
+    <span class="dot"></span>
+    <div class="pub-content">
+      <b>CoRAL: Cell identity mapping across conditions</b>
+      <span>Bioinformatics Advances, 2024</span>
+    </div>
+  </li>
 
-        <li>
-          <b>scIntegration: Minimalist toolkit for single-cell integration</b>
-          <span>Briefings in Bioinformatics, 2022</span>
-        </li>
+  <li>
+    <span class="dot"></span>
+    <div class="pub-content">
+      <b>scIntegration: Minimalist toolkit for single-cell integration</b>
+      <span>Briefings in Bioinformatics, 2022</span>
+    </div>
+  </li>
 
-        <li>
-          <b>scX: Accurate and scalable cell type deconvolution</b>
-          <span>Bioinformatics, 2024</span>
-        </li>
-      </ul>
-
+  <li>
+    <span class="dot"></span>
+    <div class="pub-content">
+      <b>scX: Accurate and scalable cell type deconvolution</b>
+      <span>Bioinformatics, 2024</span>
+    </div>
+  </li>
+</ul>
       <a class="view-all" href="#">View all publications →</a>
     </section>
 
