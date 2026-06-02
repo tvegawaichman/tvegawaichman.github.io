@@ -54,9 +54,8 @@ nav .container{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:1.2rem 0;
+    padding:1rem 0;
 }
-
 
 .logo{
     font-weight:700;
@@ -132,37 +131,21 @@ main.container {
   box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
 
-.hero{
-    padding-top:120px;
-    padding-bottom:40px;
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 6px;
 }
 
-.avatar{
-    width:240px;
-    height:240px;
-    margin-bottom:30px;
+.hero h2 {
+  color: var(--accent);
+  font-weight: 500;
+  margin-bottom: 10px;
 }
 
-.hero h1{
-    font-size:4rem;
-    line-height:1.1;
-    font-weight:800;
+.subtitle {
+  color: var(--muted);
+  margin-bottom: 25px;
 }
-
-.hero h2{
-    font-size:2rem;
-    color:#2563eb;
-    font-weight:600;
-    margin-top:10px;
-}
-
-.subtitle{
-    font-size:1.3rem;
-    color:#4b5563;
-    margin-top:15px;
-    margin-bottom:35px;
-}
-
 
 .buttons{
     display:flex;
@@ -213,32 +196,20 @@ section{
 }
 
 /* ===== FEATURED PROJECT ===== */
-.project{
-    border:1px solid #e5e7eb;
-    border-radius:14px;
-    padding:1.5rem;
-    display:flex;
-    gap:1.5rem;
-    align-items:center;
-    background:white;
+.project {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
 }
 
-.project-plot img{
-    width:180px;
-    height:auto;
-    border-radius:0;
-    box-shadow:none;
+.project-plot img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
-.project-info h4{
-    font-size:2rem;
-    margin-bottom:.5rem;
-}
-
-.project-info p{
-    color:#4b5563;
-    margin-bottom:1rem;
-}
 /* ===== PUBLICATIONS TIMELINE ===== */
 .pubs {
   list-style: none;
@@ -260,22 +231,23 @@ section{
   border-left: 2px solid #e5e7eb;
 }
 
-.dot{
-    width:10px;
-    height:10px;
-    background:#2563eb;
-    border-radius:50%;
-    margin-top:7px;
+.dot {
+  width: 10px;
+  height: 10px;
+  background: #4b5563;
+  border-radius: 50%;
+  margin-top: 6px;
+  flex-shrink: 0;
 }
 
-.pub-content b{
-    font-size:1.15rem;
-    font-weight:600;
+.pub-content b {
+  display: block;
+  font-size: 0.95rem;
 }
 
-.pub-content span{
-    font-size:1rem;
-    color:#6b7280;
+.pub-content span {
+  font-size: 0.85rem;
+  color: #6b7280;
 }
 
 .card{
@@ -415,31 +387,6 @@ section{
   font-size: 14px;
 }
 
-.home-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:4rem;
-    margin-top:3rem;
-    padding-top:3rem;
-    border-top:1px solid #e5e7eb;
-}
-
-.home-section:last-child{
-    border-left:1px solid #e5e7eb;
-    padding-left:3rem;
-}
-
-@media (max-width:900px){
-    .home-grid{
-        grid-template-columns:1fr;
-    }
-
-    .home-section:last-child{
-        border-left:none;
-        padding-left:0;
-    }
-}
-
 
 footer{
     text-align:center;
@@ -478,7 +425,6 @@ footer{
 </div>
 </nav>
 
-<main class="container">
 <section class="hero">
 <div class="container">
 <div class="hero-content">
@@ -506,8 +452,10 @@ Computational Biologist
 </div>
 
  <!-- CONTENT -->
+  <main class="container">
+
     <!-- FEATURED PROJECTS -->
-    <section class="home-section">
+    <section class="card">
       <h3>Featured Projects</h3>
 
       <div class="project">
@@ -526,7 +474,7 @@ Computational Biologist
     </section>
 
     <!-- PUBLICATIONS -->
-    <section class="home-section">
+    <section class="card">
       <h3>Recent Publications</h3>
 
       <ul class="pubs">
