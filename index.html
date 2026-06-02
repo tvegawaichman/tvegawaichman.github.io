@@ -7,7 +7,7 @@
 <title>Tomás Vega Waichman</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&display=swap" rel="stylesheet">
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
 
 :root{
@@ -30,9 +30,18 @@ html{
 
 body{
     font-family:'Inter',sans-serif;
-    background:var(--bg);
     color:var(--text);
     line-height:1.7;
+
+    background:
+        radial-gradient(
+            circle at top center,
+            #f8fafc 0%,
+            #f3f4f6 45%,
+            #eef2f7 100%
+        );
+
+    min-height:100vh;
 }
 
 .container{
@@ -54,8 +63,9 @@ nav .container{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:1rem 0;
+    padding:1.2rem 0;
 }
+
 
 .logo{
     font-weight:700;
@@ -131,21 +141,37 @@ main.container {
   box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
 
-.hero h1 {
-  font-size: 36px;
-  margin-bottom: 6px;
+.hero{
+    padding-top:120px;
+    padding-bottom:40px;
 }
 
-.hero h2 {
-  color: var(--accent);
-  font-weight: 500;
-  margin-bottom: 10px;
+.avatar{
+    width:240px;
+    height:240px;
+    margin-bottom:30px;
 }
 
-.subtitle {
-  color: var(--muted);
-  margin-bottom: 25px;
+.hero h1{
+    font-size:4rem;
+    line-height:1.1;
+    font-weight:800;
 }
+
+.hero h2{
+    font-size:2rem;
+    color:#2563eb;
+    font-weight:600;
+    margin-top:10px;
+}
+
+.subtitle{
+    font-size:1.3rem;
+    color:#4b5563;
+    margin-top:15px;
+    margin-bottom:35px;
+}
+
 
 .buttons{
     display:flex;
@@ -196,20 +222,32 @@ section{
 }
 
 /* ===== FEATURED PROJECT ===== */
-.project {
-  display: flex;
-  gap: 1.5rem;
-  align-items: center;
+.project{
+    border:1px solid #e5e7eb;
+    border-radius:14px;
+    padding:1.5rem;
+    display:flex;
+    gap:1.5rem;
+    align-items:center;
+    background:white;
 }
 
-.project-plot img {
-  width: 70px;
-  height: 70px;
-  object-fit: cover;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+.project-plot img{
+    width:180px;
+    height:auto;
+    border-radius:0;
+    box-shadow:none;
 }
 
+.project-info h4{
+    font-size:2rem;
+    margin-bottom:.5rem;
+}
+
+.project-info p{
+    color:#4b5563;
+    margin-bottom:1rem;
+}
 /* ===== PUBLICATIONS TIMELINE ===== */
 .pubs {
   list-style: none;
@@ -231,23 +269,22 @@ section{
   border-left: 2px solid #e5e7eb;
 }
 
-.dot {
-  width: 10px;
-  height: 10px;
-  background: #4b5563;
-  border-radius: 50%;
-  margin-top: 6px;
-  flex-shrink: 0;
+.dot{
+    width:10px;
+    height:10px;
+    background:#2563eb;
+    border-radius:50%;
+    margin-top:4px;
 }
 
-.pub-content b {
-  display: block;
-  font-size: 0.95rem;
+.pub-content b{
+    font-size:1rem;
+    font-weight:400;
 }
 
-.pub-content span {
-  font-size: 0.85rem;
-  color: #6b7280;
+.pub-content span{
+    font-size:1rem;
+    color:#6b7280;
 }
 
 .card{
@@ -261,6 +298,7 @@ section{
 .card:hover{
     transform:translateY(-4px);
 }
+
 
 .card h3{
     margin-bottom:1rem;
@@ -309,6 +347,14 @@ section{
     display: flex;
     gap: .75rem;
     justify-content: flex-start;
+}
+
+.card,
+.project{
+    background:rgba(255,255,255,0.85);
+    backdrop-filter:blur(8px);
+    border:1px solid rgba(229,231,235,0.8);
+    box-shadow:0 4px 20px rgba(0,0,0,0.04);
 }
 
 /* mobile responsive */
@@ -387,6 +433,51 @@ section{
   font-size: 14px;
 }
 
+.home-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:4rem;
+    margin-top:3rem;
+    padding-top:3rem;
+    border-top:1px solid #e5e7eb;
+}
+
+.home-section:last-child{
+    position:relative;
+    padding-left:3rem;
+}
+
+.home-section:last-child::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:2rem;      /* gap from horizontal line */
+    bottom:0;
+    width:1px;
+    background:#e5e7eb;
+}
+
+@media (max-width:900px){
+    .home-grid{
+        grid-template-columns:1fr;
+    }
+
+    .home-section:last-child{
+        border-left:none;
+        padding-left:0;
+    }
+}
+
+.btn i {
+    margin-right: 8px;
+}
+
+.home-divider{
+    border: none;
+    border-top: 1px solid #e5e7eb;
+    margin: 60px auto 0;
+    width: min(92%, 1100px);
+}
 
 footer{
     text-align:center;
@@ -409,6 +500,7 @@ footer{
 </style>
 </head>
 
+
 <body>
 
 <nav>
@@ -424,6 +516,7 @@ footer{
 </div>
 </div>
 </nav>
+
 
 <section class="hero">
 <div class="container">
@@ -445,17 +538,29 @@ Computational Biologist
 </p>
 
 <div class="buttons">
-    <a class="btn btn-primary" href="#">CV</a>
-    <a class="btn" href="https://github.com/tvegawaichman">GitHub</a>
-    <a class="btn" href="https://hub.docker.com/u/tvegawaichman">DockerHub</a>
-    <a class="btn" href="#">Google Scholar</a>
+    <a class="btn btn-primary" href="#">
+        <i class="fa-solid fa-file-lines"></i> CV
+    </a>
+
+    <a class="btn" href="https://github.com/tvegawaichman">
+        <i class="fa-brands fa-github"></i> GitHub
+    </a>
+
+    <a class="btn" href="https://hub.docker.com/u/tvegawaichman">
+        <i class="fa-brands fa-docker"></i> DockerHub
+    </a>
+
+    <a class="btn" href="#">
+        <i class="fa-brands fa-google-scholar"></i> Google Scholar
+    </a>
 </div>
 
- <!-- CONTENT -->
-  <main class="container">
+<hr class="home-divider">
 
+<main class="container">
+ <!-- CONTENT -->
     <!-- FEATURED PROJECTS -->
-    <section class="card">
+    <section class="home-section">
       <h3>Featured Projects</h3>
 
       <div class="project">
@@ -474,34 +579,10 @@ Computational Biologist
     </section>
 
     <!-- PUBLICATIONS -->
-    <section class="card">
+    <section class="home-section">
       <h3>Recent Publications</h3>
 
-      <ul class="pubs">
-  <li>
-    <span class="dot"></span>
-    <div class="pub-content">
-      <b>x</b>
-      <span>xx</span>
-    </div>
-  </li>
-
-  <li>
-    <span class="dot"></span>
-    <div class="pub-content">
-      <b>x</b>
-      <span>xx</span>
-    </div>
-  </li>
-
-  <li>
-    <span class="dot"></span>
-    <div class="pub-content">
-      <b>x</b>
-      <span>xx</span>
-    </div>
-  </li>
-</ul>
+     <ul class="pubs" id="recent-publications"></ul>
       <a class="view-all" href="#publications">View all publications →</a>
     </section>
 
@@ -726,6 +807,44 @@ Google Scholar: scholar profile
 <footer>
 © 2026 Tomás Vega Waichman
 </footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    const publications = document.querySelectorAll(
+        "#publications .publication"
+    );
+
+    const recentList = document.getElementById(
+        "recent-publications"
+    );
+
+    publications.forEach((pub, i) => {
+
+        if (i >= 3) return;
+
+        const title = pub.querySelector(
+            ".publication-title"
+        ).textContent.trim();
+
+        const journal = pub.querySelector(
+            ".publication-journal"
+        ).textContent.trim();
+
+        const li = document.createElement("li");
+
+        li.innerHTML = `
+            <span class="dot"></span>
+            <div class="pub-content">
+                <b>${title}</b>
+                <span>${journal}</span>
+            </div>
+        `;
+
+        recentList.appendChild(li);
+    });
+});
+</script>
 
 </body>
 </html>
